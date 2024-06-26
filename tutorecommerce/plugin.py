@@ -76,8 +76,9 @@ def _add_ecommerce_mfe_apps(
                 "port": 7296,
             },
             "payment": {
-                "repository": "https://github.com/openedx/frontend-app-payment.git",
+                "repository": "https://github.com/wayshall/frontend-app-payment.git",
                 "port": 1998,
+                "version": "open-release/quince.3-dev",
             },
         }
     )

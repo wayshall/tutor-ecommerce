@@ -10,8 +10,10 @@ RUN --mount=type=cache,target=/var/cache/apt,sharing=locked \
 ###### Checkout code
 FROM minimal as checkout
 
-ARG ECOMMERCE_REPOSITORY=https://github.com/edx/ecommerce.git
-ARG ECOMMERCE_VERSION='{{ OPENEDX_COMMON_VERSION }}'
+#ARG ECOMMERCE_REPOSITORY=https://github.com/edx/ecommerce.git
+ARG ECOMMERCE_REPOSITORY=https://github.com/wayshall/ecommerce.git
+#ARG ECOMMERCE_VERSION='{{ OPENEDX_COMMON_VERSION }}'
+ARG ECOMMERCE_VERSION='open-release/quince.3-dev'
 RUN mkdir -p /openedx/ecommerce && \
     git clone $ECOMMERCE_REPOSITORY --branch $ECOMMERCE_VERSION --depth 1 /openedx/ecommerce
 
